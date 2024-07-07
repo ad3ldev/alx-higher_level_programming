@@ -1,6 +1,10 @@
 #!/usr/bin/node
-const fs = require('fs');
+const Rectangle = require('./4-rectangle');
 
-const fArg = fs.readFileSync(process.argv[2]).toString();
-const sArg = fs.readFileSync(process.argv[3]).toString();
-fs.writeFileSync(process.argv[4], fArg + sArg);
+class Square extends Rectangle {
+  constructor (size) {
+    super(size, size);
+  }
+}
+
+module.exports = Square;
